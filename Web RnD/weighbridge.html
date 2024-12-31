@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weighbridge</title>
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <!--Feather Icons-->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="cssRnD/style.css">
+</head>
+
+<body>
+    <!--Navbar Start-->
+    <nav class="navbar">
+        <a href="index.html#home" class="navbar-logo">Research_<span>&&</span>_Dev</a>
+
+        <div class="navbar-nav">
+            <a href="index.html#home">Beranda</a>
+            <a href="index.html#about">Tentang Kami</a>
+            <a href="index.html#product">Produk</a>
+            <a href="index.html#contact">Kontak</a>
+        </div>
+
+        <div class="navbar-extra">
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+    </nav>
+    <!--Navbar End-->
+
+    <!--Description Weighbridge Start-->
+    <section class="Weighbridge" id="#Product">
+        <h2><span>Weigh</span>bridge</h2>
+        <div class="row-wb">
+            <div class="wb-img">
+                <img src="imgRnD/wb-img.png" alt="Weighbridge">
+            </div>
+            <div class="content">
+                <h3>Weighbridge</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis quam, quia praesentium
+                    placeat sunt aut laboriosam quisquam vitae quaerat, perspiciatis est. Porro, dolor ab doloribus
+                    molestias sunt voluptatum debitis.</p>
+            </div>
+        </div>
+    </section>
+    <!--Description Weighbridge End-->
+
+    <!--Simulator Section-->
+    <section>
+        <h2><span>Weighbridge</span>Simulator</h2>
+        <h3>Real-Time Weighbridge Simulator</h3>
+        <table id="wb-table">
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>ID</th>
+                <th>Plate Number</th>
+                <th>Weight 1 (kg)</th>
+                <th>Weight 2 (kg)</th>
+                <th>Net Weight (kg)</th>
+            </tr>
+        </table>
+
+    </section>
+    <!--Simulator Section-->
+
+    <!--Feather Icons-->
+    <script>
+        feather.replace();
+    </script>
+
+    <!--JS-->
+    <script src="jsRnD/script.js"></script>
+
+    <!--Database-->
+    async function fetchData() {
+    const response = await fetch('http://yourserver.com/api/get_data.php');
+    const data = await response.json();
+    const table = document.getElementById('data-table');
+    }
+</body>
+
+</html>
